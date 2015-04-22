@@ -9,7 +9,12 @@ import java.util.List;
 public class PrintFileContent {
 
 	public static void main(String[] args) {
-
+		new  PrintFileContent().printFileContentsInReverse(args);		
+	}
+	
+	
+	/*Method to print file data in reverse order*/
+	public void printFileContentsInReverse(String[] args){
 		String currLine;
 		BufferedReader reader;
 		List<String> fileLines;
@@ -24,7 +29,7 @@ public class PrintFileContent {
 				}
 				// print the lines in the reverse order
 				for (int j = fileLines.size() - 1; j >= 0; j--) {
-					//using the StringBuilder reverse function to reverse a String 
+					//using the StringBuilder - reverse method 
 					System.out.println(new StringBuilder(fileLines.get(j)).reverse().toString());
 				}
 
@@ -35,5 +40,6 @@ public class PrintFileContent {
 
 		}
 	}
+	
 
 }
