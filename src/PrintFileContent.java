@@ -9,7 +9,11 @@ import java.util.List;
 public class PrintFileContent {
 
 	public static void main(String[] args) {
-		new  PrintFileContent().printFileContentsInReverse(args);		
+		if(args.length>0){
+			new  PrintFileContent().printFileContentsInReverse(args);
+		}else{
+			System.out.println("Please provide the arguments (file names) and try again");
+		}		
 	}
 	
 	
