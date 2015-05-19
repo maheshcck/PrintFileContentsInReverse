@@ -19,8 +19,8 @@ public class PrintFileContent {
 	
 	/*Method to print file data in reverse order*/
 	public void printFileContentsInReverse(String[] args){
-		String currLine;
-		BufferedReader reader;
+		
+		BufferedReader reader = null;
 		List<String> fileLines;
 		
 		for (int i = args.length - 1; i >= 0; i--) {
@@ -28,8 +28,8 @@ public class PrintFileContent {
 				reader = new BufferedReader(new FileReader("src/" + args[i]));
 				// read all the lines into list
 				fileLines = new ArrayList<String>();
-				while ((currLine = reader.readLine()) != null) {
-					fileLines.add(currLine);
+				while ((reader.readLine()) != null) {
+					fileLines.add(reader.readLine());
 				}
 				// print the lines in the reverse order
 				for (int j = fileLines.size() - 1; j >= 0; j--) {
@@ -40,6 +40,13 @@ public class PrintFileContent {
 			} catch (IOException e) {
 				// prints exception message if exception is caught
 				System.out.println(e.getMessage());
+			}
+			finally{
+				try {
+					reader.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 
 		}
