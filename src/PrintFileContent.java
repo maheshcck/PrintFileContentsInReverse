@@ -43,6 +43,7 @@ public class PrintFileContent {
 			}
 			finally{
 				try {
+					//close reader
 					reader.close();
 				} catch (IOException e) {
 					e.printStackTrace();
