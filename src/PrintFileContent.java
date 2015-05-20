@@ -6,7 +6,7 @@ import java.util.List;
 
 /*The application prints the characters from the files in the opposite order they appear.*/
 
-/*Branch 2.2*/
+/*git 1 copy*/
 
 public class PrintFileContent {
 
@@ -15,6 +15,7 @@ public class PrintFileContent {
 			new  PrintFileContent().printFileContentsInReverse(args);
 		}else{
 			System.out.println("Please provide the arguments (file names) and try again");
+			System.out.println("local master branch");
 		}		
 	}
 	
