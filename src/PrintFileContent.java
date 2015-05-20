@@ -12,6 +12,7 @@ public class PrintFileContent {
 
 	public static void main(String[] args) {
 		if(args.length>0){
+			System.out.println("No of files :" + args.length);
 			new  PrintFileContent().printFileContentsInReverse(args);
 		}else{
 			System.out.println("Please provide the arguments (file names) and try again");
