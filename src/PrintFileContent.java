@@ -10,12 +10,22 @@ import java.util.List;
 public class PrintFileContent {
 
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		if (args.length > 0) {
 			new PrintFileContent().printFileContentsInReverse(args);
 		} else {
 			System.out
 					.println("Please provide the arguments (file names) and try again");
 		}
+=======
+		if(args.length>0){
+			System.out.println("No of files :" + args.length);
+			new  PrintFileContent().printFileContentsInReverse(args);
+		}else{
+			System.out.println("Please provide the arguments (file names) and try again");
+			System.out.println("local master branch");
+		}		
+>>>>>>> refs/heads/FileSizeCheck
 	}
 
 	/* Method to print file data in reverse order */
